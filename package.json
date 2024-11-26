@@ -1,0 +1,44 @@
+{
+  "name": "dsp-platform",
+  "module": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun --hot run src/app.ts",
+    "migrate": "npx prisma migrate dev",
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.10.0",
+    "prisma": "^5.22.0",
+    "sequelize-cli": "^6.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/sequelize": "^4.28.20",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "process": "^0.11.10",
+    "sequelize": "^6.37.5",
+    "ts-node": "^10.9.2",
+    "xss-clean": "^0.1.4"
+  }
+}

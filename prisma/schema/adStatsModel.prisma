@@ -1,0 +1,11 @@
+model AdStats {
+  id          String   @id @default(uuid())
+  campaignId  String
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  installs    Int      @default(0)
+  spend       Float    @default(0.0)
+  revenue     Float    @default(0.0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

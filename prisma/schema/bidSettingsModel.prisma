@@ -1,0 +1,9 @@
+model BidSettings {
+  id         String   @id @default(uuid())
+  geo        String   @unique
+  category   String
+  baseCpm    Float
+  multiplier Float    @default(1.0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
